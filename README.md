@@ -3,7 +3,7 @@ Alpine Docker image with luvit built-in
 
 Published: https://hub.docker.com/r/cyr1l/alpine-luvit/
 
-### Usage: 
+## Usage: 
 ```
 docker pull cyr1l/alpine-luvit
 ```
