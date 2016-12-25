@@ -12,7 +12,7 @@ MAINTAINER Cyril Hou <houshoushuai@gmail.com>
 WORKDIR /tmp
 RUN apk update && \
     apk upgrade && \
-    apk add --update git perl build-base cmake linux-headers curl && \
+    apk add --update bash git perl build-base cmake linux-headers curl && \
     git clone --recursive https://github.com/luvit/luvi.git && \
     cd luvi && \
     make regular-asm test && \
@@ -25,4 +25,5 @@ RUN apk update && \
     lit make lit://luvit/luvit /usr/local/bin/luvit prefix && \
     apk del git perl build-base && \
     rm -rf /tmp/luvi && \
-    cd && rm latest.zip
+    cd && rm latest.zip && \
+    rm -rf /var/cache/apk/*
